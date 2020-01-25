@@ -1,0 +1,25 @@
+{
+  "name": "sample-application",
+  "version": "0.1.1",
+  "description": "A sample Application that shows the usage of Rokkit.ts",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rokkit.ts",
+    "sample"
+  ],
+  "author": "Jann Deterling",
+  "license": "MIT",
+  "dependencies": {
+    "@rokkit.ts/core": "^0.1.4",
+    "@rokkit.ts/web": "^0.1.4",
+    "@types/node": "^13.5.0",
+    "prettier": "^1.19.1",
+    "ts-node": "^8.6.2",
+    "tslint": "^6.0.0",
+    "typescript": "^3.7.5"
+  }
+}
