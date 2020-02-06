@@ -1,0 +1,47 @@
+[
+  {
+    "classInformation": {
+      "className": "SampleComponentStore",
+      "constructors": [
+        {
+          "parameters": []
+        }
+      ]
+    },
+    "sourceFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/src/SampleComponentStore.ts",
+    "compiledFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/build/SampleComponentStore.js"
+  },
+  {
+    "classInformation": {
+      "className": "SampleController",
+      "constructors": [
+        {
+          "parameters": [
+            {
+              "name": "sampleComponentStore",
+              "type": "SampleComponentStore"
+            },
+            {
+              "name": "greet",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    "sourceFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/src/SampleController.ts",
+    "compiledFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/build/SampleController.js"
+  },
+  {
+    "classInformation": {
+      "className": "SampleApplication",
+      "constructors": [
+        {
+          "parameters": []
+        }
+      ]
+    },
+    "sourceFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/src/index.ts",
+    "compiledFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/build/index.js"
+  }
+]

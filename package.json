@@ -14,9 +14,10 @@
   "author": "Jann Deterling",
   "license": "MIT",
   "dependencies": {
-    "@rokkit.ts/core": "^0.1.4",
-    "@rokkit.ts/web": "^0.1.4",
+    "@rokkit.ts/core": "^0.1.6",
+    "@rokkit.ts/web": "^0.2.2",
     "@types/node": "^13.5.0",
+    "@types/restify": "^8.4.2",
     "prettier": "^1.19.1",
     "ts-node": "^8.6.2",
     "tslint": "^6.0.0",
