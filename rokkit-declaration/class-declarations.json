@@ -1,47 +1,55 @@
 [
   {
     "classInformation": {
-      "className": "SampleComponentStore",
+      "className": "BookStoreApplication",
       "constructors": [
         {
           "parameters": []
         }
       ]
     },
-    "sourceFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/src/SampleComponentStore.ts",
-    "compiledFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/build/SampleComponentStore.js"
+    "sourceFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/src/BookStoreApplication.ts",
+    "compiledFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/build/BookStoreApplication.js"
   },
   {
     "classInformation": {
-      "className": "SampleController",
+      "className": "Book",
       "constructors": [
         {
           "parameters": [
             {
-              "name": "sampleComponentStore",
-              "type": "SampleComponentStore"
+              "name": "id",
+              "type": "string"
             },
             {
-              "name": "greet",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "author",
+              "type": "string"
+            },
+            {
+              "name": "published",
               "type": "string"
             }
           ]
         }
       ]
     },
-    "sourceFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/src/SampleController.ts",
-    "compiledFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/build/SampleController.js"
+    "sourceFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/src/books/Book.ts",
+    "compiledFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/build/books/Book.js"
   },
   {
     "classInformation": {
-      "className": "SampleApplication",
+      "className": "BookController",
       "constructors": [
         {
           "parameters": []
         }
       ]
     },
-    "sourceFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/src/index.ts",
-    "compiledFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/build/index.js"
+    "sourceFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/src/books/BookController.ts",
+    "compiledFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/build/books/BookController.js"
   }
 ]
