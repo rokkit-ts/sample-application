@@ -16,13 +16,13 @@
   "author": "Jann Deterling",
   "license": "MIT",
   "dependencies": {
-    "@rokkit.ts/core": "^0.2.2",
+    "@rokkit.ts/core": "^0.2.3",
     "@rokkit.ts/web": "^0.2.7",
     "@types/node": "^13.9.2",
     "@types/restify": "^8.4.2",
     "newman": "^4.6.0",
     "prettier": "^1.19.1",
-    "ts-node": "^8.7.0",
+    "ts-node": "^8.8.1",
     "tslint": "^6.1.0",
     "typescript": "^3.8.3"
   }
