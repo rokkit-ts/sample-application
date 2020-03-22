@@ -1,4 +1,4 @@
-# [Rokkit.ts sample Application](https://rokkit.dev)
+# [Rokkit.ts Sample Application](https://rokkit.dev)
 
 Rokkit.ts a microservice framework build in TypeScript for Node.js.
 It focuses on a modular component system, developer exerience and good designed APIs to build any application without making restrictions.  
