@@ -42,10 +42,44 @@
   },
   {
     "classInformation": {
-      "className": "BookController",
+      "className": "BookRepository",
       "constructors": [
         {
           "parameters": []
+        }
+      ]
+    },
+    "sourceFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/src/books/BookRepository.ts",
+    "compiledFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/build/books/BookRepository.js"
+  },
+  {
+    "classInformation": {
+      "className": "BookService",
+      "constructors": [
+        {
+          "parameters": [
+            {
+              "name": "repository",
+              "type": "BookRepository"
+            }
+          ]
+        }
+      ]
+    },
+    "sourceFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/src/books/BookService.ts",
+    "compiledFilePath": "/Users/janndeterling/Documents/projects/rokkit.ts/sample-application/build/books/BookService.js"
+  },
+  {
+    "classInformation": {
+      "className": "BookController",
+      "constructors": [
+        {
+          "parameters": [
+            {
+              "name": "service",
+              "type": "BookService"
+            }
+          ]
         }
       ]
     },

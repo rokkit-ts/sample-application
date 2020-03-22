@@ -1,3 +1,8 @@
+export interface BookFields {
+  name: string | undefined
+  author: string | undefined
+  published: string | undefined
+}
 export class Book {
   public id: string
   private author: string

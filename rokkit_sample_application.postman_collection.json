@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "69d7b174-d3b8-43e3-82d8-80aaaa8e2fa9",
+		"name": "Rokkit.ts Sample Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All books",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "542bfe87-3126-4e0b-9685-b1d0f5786359",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"First id is not undefined\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData[0].id).to.not.eql(undefined);",
+							"    pm.globals.set(\"book_id\", jsonData[0].id);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One book",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "936af79d-689c-41b5-b28e-675bf4613220",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/{{book_id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"{{book_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a book",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9b84cb64-31de-465d-9b95-1fca2df3a5d3",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"",
+							"pm.test(\"Id should not be undefined\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.id).to.not.eql(undefined);",
+							"    pm.globals.set(\"book_id_to_update\", jsonData.id);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Some new book\",\n    \"author\": \"Some new author\",\n    \"published\": \"2010-01-28T07:43:38.188Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a book",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "94d7be97-fe65-4ee0-a7ad-196ddd29baf6",
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/{{book_id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"{{book_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update books fields",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8396d56a-7391-4f24-a9a7-07fa9871db32",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    var id = pm.globals.get(\"book_id_to_update\");",
+							"    pm.expect(jsonData.id).to.eql(id);",
+							"    pm.expect(jsonData.name).to.eql(\"Some updated book\");",
+							"    pm.expect(jsonData.author).to.eql(\"Some updated author\");",
+							"    pm.expect(jsonData.published).to.eql(\"2020-01-28T07:43:38.188Z\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Some updated book\",\n    \"author\": \"Some updated author\",\n    \"published\": \"2020-01-28T07:43:38.188Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books/{{book_id_to_update}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"{{book_id_to_update}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch the book name",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e871a218-4135-4447-9aa2-90c2ec013391",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    var id = pm.globals.get(\"book_id_to_update\");",
+							"    pm.expect(jsonData.id).to.eql(id);",
+							"    pm.expect(jsonData.name).to.eql(\"Some patched book\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Some patched book\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books/{{book_id_to_update}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"{{book_id_to_update}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

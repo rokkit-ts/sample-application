@@ -7,7 +7,7 @@
     "start": "rokkit-cli start -e \"./build/BookStoreApplication.js\" -p",
     "build": "rokkit-cli build",
     "dev": "rokkit-cli start -e \"./src/BookStoreApplication.ts\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": " newman run ./rokkit_sample_application.postman_collection.json"
   },
   "keywords": [
     "rokkit.ts",
@@ -20,6 +20,7 @@
     "@rokkit.ts/web": "^0.2.7",
     "@types/node": "^13.9.2",
     "@types/restify": "^8.4.2",
+    "newman": "^4.6.0",
     "prettier": "^1.19.1",
     "ts-node": "^8.7.0",
     "tslint": "^6.1.0",
